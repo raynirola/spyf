@@ -26,7 +26,7 @@ export default function PostPage({ data, content }) {
 				<meta name='description' content={data.description} />
 			</Head>
 
-			<article className='py-8 mx-auto prose'>
+			<article className='px-4 py-8 mx-auto prose'>
 				<header className='mb-8'>
 					<h1>{data.title}</h1>
 					{data.description && <p className='description'>{data.description}</p>}
@@ -41,7 +41,7 @@ export default function PostPage({ data, content }) {
 						</div>
 					)}
 				</header>
-				<main className='mx-auto prose prose-orange'>
+				<main className='mx-auto prose prose-yellow'>
 					<MDXRemote {...content} components={components} />
 				</main>
 			</article>

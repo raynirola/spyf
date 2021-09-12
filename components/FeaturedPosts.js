@@ -3,7 +3,7 @@ import Image from "next/image"
 
 const FeaturedPosts = ({ featuredPosts }) => {
 	return (
-		<section className='max-w-xl px-4 mx-auto sm:mt-14 md:max-w-3xl lg:max-w-5xl xl:max-w-6xl md:px-0'>
+		<section className='max-w-xl px-4 mx-auto mt-6 sm:mt-14 md:max-w-3xl lg:max-w-5xl xl:max-w-6xl md:px-0'>
 			<div className='aspect-w-1 aspect-h-1 md:aspect-w-16 md:aspect-h-7'>
 				<div className='grid grid-cols-2 grid-rows-3 gap-2 md:grid-cols-3 md:grid-rows-2'>
 					{renderPosts(featuredPosts)}
@@ -27,12 +27,14 @@ const renderBigItem = ({ data, slug }) => {
 			<Image src={require("../public/" + data.coverImage)} layout='fill' placeholder='blur' />
 			<div className='relative flex flex-col justify-end h-full p-3 text-white bg-gradient-to-t from-black to-transparent sm:p-4 md:p-6 bg-opacity-20'>
 				<p
-					className='px-3 py-1 mb-1 text-xs leading-none rounded-full w-max'
+					className='px-2 py-1 mb-1 text-xs leading-none rounded-full sm:px-3 w-max'
 					style={{ backgroundColor: topicColor }}>
 					{data.topic.name}
 				</p>
 				<Link as={`/articles/${slug}`} href={`/articles/[slug]`}>
-					<a className='font-medium hover:underline line-clamp-2'>{data.title}</a>
+					<a className='text-sm font-medium sm:text-base hover:underline line-clamp-2'>
+						{data.title}
+					</a>
 				</Link>
 			</div>
 		</div>
@@ -46,12 +48,14 @@ const renderItem = ({ data, slug }) => {
 			<Image src={require("../public/" + data.coverImage)} layout='fill' placeholder='blur' />
 			<div className='relative flex flex-col justify-end h-full p-3 text-white bg-gradient-to-t from-black to-transparent sm:p-4 md:p-6 bg-opacity-20'>
 				<p
-					className='px-3 py-1 mb-1 text-xs leading-none rounded-full w-max'
+					className='px-2 py-1 mb-1 text-xs leading-none rounded-full sm:px-3 w-max'
 					style={{ backgroundColor: topicColor }}>
 					{data.topic.name}
 				</p>
 				<Link as={`/articles/${slug}`} href={`/articles/[slug]`}>
-					<a className='font-medium hover:underline line-clamp-2'>{data.title}</a>
+					<a className='text-sm font-medium sm:text-base hover:underline line-clamp-2'>
+						{data.title}
+					</a>
 				</Link>
 			</div>
 		</div>

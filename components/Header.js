@@ -20,8 +20,8 @@ const Header = () => {
 						<InstagramIcon className='w-4 h-4 text-gray-700' />
 					</div>
 					<div className='grid place-items-center'>
-						<Logo />
-						<h1 className='hidden font-semibold tracking-wide text-center sm:mt-2 sm:block sm:text-sm md:text-base'>
+						<Logo className='relative block w-10 h-10 sm:h-14 sm:w-14 md:w-20 md:h-20' />
+						<h1 className='hidden font-serif font-semibold tracking-wide text-center text-gray-700 sm:mt-2 sm:block sm:text-sm md:text-base'>
 							Sikkim Progressive Youth Forum
 						</h1>
 					</div>
@@ -32,7 +32,7 @@ const Header = () => {
 					</div>
 				</div>
 			</header>
-			<nav className='max-w-full px-4 mx-auto bg-white sm:block md:max-w-3xl lg:max-w-5xl xl:max-w-6xl md:px-0'>
+			<nav className='max-w-full px-4 mx-auto sm:block md:max-w-3xl lg:max-w-5xl xl:max-w-6xl md:px-0'>
 				<ul className='flex items-center justify-center space-x-6 text-sm text-gray-700 border border-l-0 border-r-0 border-gray-200'>
 					<li>
 						<Link href='/'>
@@ -47,6 +47,11 @@ const Header = () => {
 					<li>
 						<Link href='/topics'>
 							<a className='py-3.5 inline-block'>Topics</a>
+						</Link>
+					</li>
+					<li>
+						<Link href='/discuss'>
+							<a className='py-3.5 inline-block'>Forum</a>
 						</Link>
 					</li>
 					<li>
