@@ -3,7 +3,10 @@ import Link from "next/link"
 const LatestPosts = ({ latestPosts }) => {
 	return (
 		<section className='max-w-xl px-4 mx-auto mt-14 md:max-w-3xl lg:max-w-5xl xl:max-w-6xl md:px-0'>
-			<h2>Latest Articles</h2>
+			<div className='mb-4'>
+				<h2 className='text-xs font-medium text-gray-600 uppercase'>Latest Articles</h2>
+				<span className='rounded-full mt-1 block h-0.5 bg-yellow-600 w-14'></span>
+			</div>
 			<div className='grid grid-cols-3 gap-3'>
 				<div className='col-span-3 space-y-3 md:space-y-6 md:col-span-2'>
 					{latestPosts.map((post) => renderItem(post))}

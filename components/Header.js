@@ -14,10 +14,16 @@ const Header = () => {
 		<>
 			<header>
 				<div className='grid max-w-xl grid-cols-3 px-4 py-8 mx-auto md:max-w-3xl lg:max-w-5xl xl:max-w-6xl md:px-0 sm:py-12'>
-					<div className='flex items-center space-x-4'>
-						<FacebookIcon className='w-4 h-4 text-gray-700' />
-						<TwitterIcon className='w-4 h-4 text-gray-700' />
-						<InstagramIcon className='w-4 h-4 text-gray-700' />
+					<div className='flex items-center space-x-2'>
+						<div className='flex items-center justify-center w-6 h-6 transition duration-300 ease-in-out bg-gray-200 rounded-md cursor-pointer group hover:bg-white'>
+							<FacebookIcon className='w-4 h-4 text-gray-700 group-hover:text-[#1877F2]' />
+						</div>
+						<div className='flex items-center justify-center w-6 h-6 transition duration-300 ease-in-out bg-gray-200 rounded-md cursor-pointer group hover:bg-white'>
+							<TwitterIcon className='w-4 h-4 text-gray-700 group-hover:text-[#1DA1F2]' />
+						</div>
+						<div className='flex items-center justify-center w-6 h-6 transition duration-300 ease-in-out bg-gray-200 rounded-md cursor-pointer group hover:bg-white'>
+							<InstagramIcon className='w-4 h-4 text-gray-700 group-hover:text-[#E4405F]' />
+						</div>
 					</div>
 					<div className='grid place-items-center'>
 						<Logo className='relative block w-10 h-10 sm:h-14 sm:w-14 md:w-20 md:h-20' />
@@ -25,10 +31,16 @@ const Header = () => {
 							Sikkim Progressive Youth Forum
 						</h1>
 					</div>
-					<div className='flex items-center justify-end space-x-4'>
-						<SearchIcon className='h-5 w-5 text-gray-700 mb-1.5' />
-						<SunIcon className='h-5 w-5 text-gray-700 mb-1.5' />
-						<HamburgerMenuIcon className='md:hidden h-5 w-5 text-gray-700 mb-1.5' />
+					<div className='flex items-center justify-end space-x-2'>
+						<div className='flex items-center justify-center w-6 h-6 transition duration-300 ease-in-out bg-gray-200 rounded-md cursor-pointer group hover:bg-white'>
+							<SearchIcon className='w-4 h-4 text-gray-700' />
+						</div>
+						<div className='flex items-center justify-center w-6 h-6 transition duration-300 ease-in-out bg-gray-200 rounded-md cursor-pointer group hover:bg-white'>
+							<SunIcon className='w-4 h-4 text-gray-700' />
+						</div>
+						<div className='flex items-center justify-center w-6 h-6 transition duration-300 ease-in-out bg-gray-200 rounded-md cursor-pointer md:hidden group hover:bg-white'>
+							<HamburgerMenuIcon className='w-4 h-4 text-gray-700' />
+						</div>
 					</div>
 				</div>
 			</header>
