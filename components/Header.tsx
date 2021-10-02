@@ -29,7 +29,7 @@ const Header: FC = () => {
         <>
             <header>
                 <div
-                    className='grid max-w-xl grid-cols-3 px-4 py-8 mx-auto md:max-w-3xl lg:max-w-5xl xl:max-w-6xl md:px-0 sm:py-12'>
+                    className='grid max-w-xl grid-cols-3 px-4 py-8 mx-auto md:max-w-3xl lg:max-w-5xl xl:max-w-6xl xl:px-0 sm:py-12'>
                     <div className='flex items-center space-x-2'>
                         <div
                             className='flex items-center justify-center w-6 h-6 transition duration-300 ease-in-out bg-gray-200 rounded-md cursor-pointer group hover:bg-white'>
@@ -69,7 +69,7 @@ const Header: FC = () => {
             <nav className='max-w-full px-4 mx-auto sm:block md:max-w-3xl lg:max-w-5xl xl:max-w-6xl md:px-0'>
                 <ul className='flex items-center justify-center space-x-6 text-sm text-gray-700 border border-l-0 border-r-0 border-gray-200'>
                     {!loading && menus.map((menu) => (
-                        <li>
+                        <li key={menu.id}>
                             <Link href={menu.link}>
                                 <a className='py-3.5 inline-block'>{menu.title}</a>
                             </Link>
