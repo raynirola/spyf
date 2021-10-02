@@ -32,6 +32,7 @@ const GetAllPostsQuery = gql(`
                 }
                 tags
                 author {
+                    id
                     name
                     picture {
                         url
@@ -54,6 +55,7 @@ const GetLatestPostsQuery = gql(`
                 }
                 tags
                 author {
+                    id
                     name
                     title
                     picture {
