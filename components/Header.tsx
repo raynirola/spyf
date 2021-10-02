@@ -1,9 +1,10 @@
 import Link from "next/link"
 
-import { FacebookIcon, HamburgerMenuIcon, InstagramIcon, SearchIcon, SunIcon, TwitterIcon } from "@/utils/icons"
+import { HamburgerMenuIcon, SearchIcon, SunIcon} from "@/utils/icons"
 import { Logo } from "@/components"
 import { FC, Fragment, useEffect, useState } from "react";
 import { API, GetMenusQuery } from "@/api";
+import { useRouter } from "next/router";
 
 interface Menu {
     id: string
@@ -15,6 +16,7 @@ const Header: FC = () => {
     const [menus, setMenus] = useState<Menu[]>([])
     const [loading, setLoading] = useState<boolean>(true)
     const [mobileMenuDropDownOpen, setMobileMenuDropDown] = useState<boolean>(false)
+    const router = useRouter()
 
     async function getMenus() {
         const {data, loading} = await API.query<{ menus: Menu[] }>({query: GetMenusQuery})
@@ -85,15 +87,7 @@ const Header: FC = () => {
                         <div className='flex items-center space-x-2'>
                             <div
                                 className='flex items-center justify-center w-8 h-8 transition duration-300 ease-in-out bg-gray-200 rounded-md cursor-pointer group hover:bg-white'>
-                                <FacebookIcon className='w-4 h-4 text-gray-700 group-hover:text-[#1877F2]'/>
-                            </div>
-                            <div
-                                className='flex items-center justify-center w-8 h-8 transition duration-300 ease-in-out bg-gray-200 rounded-md cursor-pointer group hover:bg-white'>
-                                <TwitterIcon className='w-4 h-4 text-gray-700 group-hover:text-[#1DA1F2]'/>
-                            </div>
-                            <div
-                                className='flex items-center justify-center w-8 h-8 transition duration-300 ease-in-out bg-gray-200 rounded-md cursor-pointer group hover:bg-white'>
-                                <InstagramIcon className='w-4 h-4 text-gray-700 group-hover:text-[#E4405F]'/>
+                                <SearchIcon className='w-4 h-4 text-gray-700'/>
                             </div>
                         </div>
                         <div className='grid place-items-center'>
@@ -109,21 +103,17 @@ const Header: FC = () => {
                         <div className='flex items-center justify-end space-x-2'>
                             <div
                                 className='flex items-center justify-center w-8 h-8 transition duration-300 ease-in-out bg-gray-200 rounded-md cursor-pointer group hover:bg-white'>
-                                <SearchIcon className='w-4 h-4 text-gray-700'/>
-                            </div>
-                            <div
-                                className='flex items-center justify-center w-8 h-8 transition duration-300 ease-in-out bg-gray-200 rounded-md cursor-pointer group hover:bg-white'>
                                 <SunIcon className='w-4 h-4 text-gray-700'/>
                             </div>
                         </div>
                     </div>
                 </header>
                 <nav className='max-w-full px-4 mx-auto sm:block md:max-w-3xl lg:max-w-5xl xl:max-w-6xl md:px-0'>
-                    <ul className='flex items-center justify-center space-x-6 text-sm text-gray-700 border border-l-0 border-r-0 border-gray-200'>
+                    <ul className='flex items-center justify-center space-x-6 text-sm text-gray-700 border-b border-gray-200 pb-3'>
                         {!loading && menus.map((menu) => (
                             <li key={menu.id}>
                                 <Link href={menu.link}>
-                                    <a className='py-3.5 inline-block'>{menu.title}</a>
+                                    <a className={`py-2 inline-block hover:bg-white rounded-md px-4 hover:text-gray-800 ${router.pathname === menu.link ? 'bg-white' : ''}`}>{menu.title}</a>
                                 </Link>
                             </li>
                         ))}
@@ -157,7 +147,7 @@ const Header: FC = () => {
             </div>
 
             {/*Mobile Navigation*/}
-            <div className="sm:hidden sticky top-0 bg-gray-100 shadow-sm z-20">
+            <div className="sm:hidden sticky top-0 bg-gray-100 shadow-lg z-20">
                 {renderMobileNav()}
             </div>
         </>
