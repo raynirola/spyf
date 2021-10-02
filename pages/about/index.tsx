@@ -21,8 +21,8 @@ const AboutPage: NextPage = () => {
                 <div className="mx-auto max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-6xl px-4 xl:px-0 prose">
                     <h1>Meet our team.</h1>
                 </div>
-                <div className='max-w-xl mx-auto md:max-w-3xl lg:max-w-5xl xl:max-w-6xl px-4 xl:px-0'>
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px sm:gap-1 md:gap-px mt-12">
+                <div className='max-w-xl mx-auto md:max-w-3xl lg:max-w-5xl xl:max-w-6xl sm:px-4 xl:px-0'>
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-1 sm:gap-1 md:gap-px mt-12">
                         <TeamMember member={{name: "Core Member", bio: "Too earthly to be of any heavenly value.", avatar: "/spyf.png", designation: "Author SPYF"}}/>
                         <TeamMember member={{name: "Core Member", bio: "Too earthly to be of any heavenly value.", avatar: "/spyf.png", designation: "Author SPYF"}}/>
                         <TeamMember member={{name: "Core Member", bio: "Too earthly to be of any heavenly value.", avatar: "/spyf.png", designation: "Author SPYF"}}/>

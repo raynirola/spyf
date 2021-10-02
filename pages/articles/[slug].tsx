@@ -2,10 +2,11 @@ import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import Head from "next/head"
 import Image from "next/image"
 
-import { AppLayout } from "@/layouts";
 import { Post } from "@/models";
-import { AllPostSlugQuery, API, GetPostBySlugQuery } from "@/api";
+import { Tag } from "@/components";
+import { AppLayout } from "@/layouts";
 import { formattedTime } from "@/utils/time";
+import { AllPostSlugQuery, API, GetPostBySlugQuery } from "@/api";
 
 interface PostPageProps {
     post: Post
@@ -21,11 +22,11 @@ const PostPage: NextPage<PostPageProps> = ({post}) => {
             </Head>
 
             <main>
-                <header className='max-w-xl px-4 mx-auto md:max-w-3xl lg:max-w-5xl xl:max-w-6xl xl:px-0'>
-                    <div className='py-4 sm:py-8 md:py-10 lg:py-12'>
-                        <div className="max-w-3xl mx-auto mb-8 lg:mb-12">
+                <header className='max-w-xl sm:px-4 mx-auto md:max-w-3xl lg:max-w-5xl xl:max-w-6xl xl:px-0'>
+                    <div className='pt-4 sm:py-8 md:py-10 lg:py-12'>
+                        <div className="px-4 sm:px-0 max-w-3xl mx-auto mb-8 lg:mb-12">
                             <nav className="flex flex-wrap font-light text-xs lg:text-base text-gray-500 mb-4">
-                                {post.tags.map(tag => renderTag(tag))}
+                                {post.tags.map(tag => <Tag key={tag} tag={tag}/>)}
                             </nav>
                             <div className="prose prose-sm sm:prose lg:prose-lg mb-6 min-w-full">
                                 <h1>{post.title}</h1>
@@ -68,15 +69,6 @@ const PostPage: NextPage<PostPageProps> = ({post}) => {
             </main>
         </AppLayout>
     )
-
-    function renderTag(tag: string) {
-        return (
-            <div className="mr-4 mt-2" key={tag}>
-                <span className="text-gray-300">#</span>
-                {tag}
-            </div>
-        )
-    }
 };
 
 export default PostPage

@@ -14,7 +14,7 @@ const ArticleCard: FC<ArticleCardProps> = ({post}) => {
     return (
         <Link as={`/articles/${post.slug}`} href={`/articles/[slug]`}>
             <a key={post.id}
-               className='block px-4 py-6 transition duration-300 ease-in-out bg-white rounded-md sm:p-6 hover:shadow'>
+               className='block px-4 py-6 transition duration-300 ease-in-out bg-white sm:rounded-md sm:p-6 hover:shadow'>
                 <div className="h-full flex items-start">
                     <div className="flex-grow">
                         <a className="inline-flex items-center mb-4">

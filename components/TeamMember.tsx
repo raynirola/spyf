@@ -12,7 +12,7 @@ const TeamMember:FC<TeamMemberProps> = ({member}) => {
     return (
         <div className="p-4 bg-white">
             <div className="h-full flex items-start text-left">
-                <div className="relative flex-shrink-0 rounded-lg overflow-hidden w-24 h-24 sm:w-16 sm:h-16">
+                <div className="relative flex-shrink-0 rounded-lg overflow-hidden w-14 h-14 sm:w-16 sm:h-16">
                     <Image src={member.avatar} layout="fill" title={member.name} alt={`Avatar of ${member.name}`}/>
                 </div>
                 <div className="flex-grow pl-4">

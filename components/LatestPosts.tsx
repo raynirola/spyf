@@ -13,8 +13,8 @@ interface LatestPostsProps {
 
 const LatestPosts: FC<LatestPostsProps> = ({latestPosts}) => {
     return (
-        <section className='max-w-xl px-4 mx-auto mt-14 md:max-w-3xl lg:max-w-5xl xl:max-w-6xl xl:px-0'>
-            <div className='mb-6 flex items-center justify-between'>
+        <section className='max-w-xl sm:px-4 mx-auto mt-8 sm:mt-14 md:max-w-3xl lg:max-w-5xl xl:max-w-6xl xl:px-0'>
+            <div className='mb-6 flex items-center justify-between px-4 sm:px-0'>
                 <div>
                     <h2 className='text-sm sm:text-base font-semibold text-gray-800 uppercase tracking-wide'>Latest
                         Updates</h2>
@@ -30,10 +30,10 @@ const LatestPosts: FC<LatestPostsProps> = ({latestPosts}) => {
                 </div>
             </div>
             <div className='grid grid-cols-3 gap-3'>
-                <div className='col-span-3 space-y-3 lg:space-y-6 lg:col-span-2'>
+                <div className='col-span-3 divide-y sm:divide-none sm:space-y-3 lg:space-y-6 lg:col-span-2'>
                     {latestPosts.map((post) => <ArticleCard key={post.id} post={post}/>)}
                 </div>
-                <div className='col-span-3 mt-12 space-y-4 lg:mt-0 lg:col-span-1'>
+                <div className='col-span-3 sm:mt-12 space-y-3 lg:mt-0 lg:col-span-1'>
                     <Tags/>
                     <SocialFeed/>
                 </div>
