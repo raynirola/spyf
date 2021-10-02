@@ -1,12 +1,15 @@
-import Image from "next/image";
-import { formattedTime } from "@/utils/time";
-import Link from "next/link";
 import { FC } from "react";
+import Link from "next/link";
+import Image from "next/image";
+
+import { formattedTime } from "@/utils/time";
 import { Post } from "@/models";
+import { Tag } from "@/components/Tag";
 
 interface ArticleCardProps {
     post: Post
 }
+
 const ArticleCard: FC<ArticleCardProps> = ({post}) => {
     return (
         <Link as={`/articles/${post.slug}`} href={`/articles/[slug]`}>
@@ -34,21 +37,13 @@ const ArticleCard: FC<ArticleCardProps> = ({post}) => {
                             {post.excerpt}
                         </p>
                         <div className="flex flex-wrap font-light text-xs text-gray-500">
-                            {post.tags.map((tag) => renderTag(tag))}
+                            {post.tags.map((tag) => <Tag key={tag} tag={tag}/>)}
                         </div>
                     </div>
                 </div>
             </a>
         </Link>
     )
-    function renderTag(tag: string) {
-        return (
-            <div className="mr-4 mt-2" key={tag}>
-                <span className="text-gray-300">#</span>
-                {tag}
-            </div>
-        )
-    }
 };
 
 export { ArticleCard };
