@@ -7,17 +7,19 @@
 		"start": "next start"
 	},
 	"devDependencies": {
+		"@apollo/client": "^3.4.15",
 		"@tailwindcss/aspect-ratio": "^0.2.1",
 		"@tailwindcss/line-clamp": "^0.2.1",
 		"@tailwindcss/typography": "^0.4.1",
-		"autoprefixer": "^10.3.4",
-		"gray-matter": "^4.0.2",
+		"@types/react": "^17.0.25",
+		"autoprefixer": "^10.3.6",
+		"graphql": "^15.6.0",
 		"next": "latest",
-		"next-mdx-remote": "^3.0.1",
-		"next-remote-watch": "1.0.0",
-		"postcss": "^8.3.6",
+		"next-themes": "^0.0.15",
+		"postcss": "^8.3.8",
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
-		"tailwindcss": "^2.2.15"
+		"tailwindcss": "^2.2.16",
+		"typescript": "^4.4.3"
 	}
 }
