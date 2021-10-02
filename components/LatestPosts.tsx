@@ -80,7 +80,7 @@ const LatestPosts: FC<LatestPostsProps> = ({latestPosts}) => {
 
     function renderTag(tag: string) {
         return (
-            <div className="mr-4 mt-2">
+            <div className="mr-4 mt-2" key={tag}>
                 <span className="text-gray-300">#</span>
                 {tag}
             </div>
