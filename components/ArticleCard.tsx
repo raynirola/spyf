@@ -28,12 +28,12 @@ const ArticleCard: FC<ArticleCardProps> = ({post}) => {
                                 />
                             </div>
                             <div className="pl-3">
-                                <div className="block text-sm text-gray-700">{post.author.name}</div>
+                                <div className="block font-medium text-sm text-gray-700">{post.author.name}</div>
                                 <time className="block text-xs text-gray-400 font-light">{formattedTime(post.publishedAt)}</time>
                             </div>
                         </a>
-                        <h1 className=" sm:text-lg font-medium text-gray-800 mb-2 line-clamp-3">{post.title}</h1>
-                        <p className="leading-relaxed text-sm text-gray-600 line-clamp-4 mb-2">
+                        <h1 className=" sm:text-lg font-medium text-gray-800 mb-4 line-clamp-3">{post.title}</h1>
+                        <p className="leading-relaxed text-sm text-gray-500 line-clamp-4 mb-2">
                             {post.excerpt}
                         </p>
                         <div className="flex flex-wrap font-light text-xs text-gray-500">
