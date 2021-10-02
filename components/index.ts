@@ -1,0 +1,7 @@
+export { Logo } from "./Logo"
+export { FeaturedPosts } from "./FeaturedPosts"
+export { Header } from "./Header"
+export { Footer } from "./Footer"
+export { LatestPosts } from "./LatestPosts"
+export { Tags } from "./Tags"
+export { Newsletter } from "./Newsletter"
