@@ -25,7 +25,7 @@ const PostIndex: NextPage<PostIndexProps> = ({posts}) => {
 
             <section className='max-w-xl px-4 mx-auto mt-8 lg:mt-14 md:max-w-3xl lg:max-w-5xl xl:max-w-6xl xl:px-0'>
                 <div className='grid lg:grid-cols-2 gap-3'>
-                    {posts.map((post) => <ArticleCard post={post}/>)}
+                    {posts.map((post) => <ArticleCard key={post.id} post={post}/>)}
                 </div>
             </section>
         </AppLayout>
