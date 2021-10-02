@@ -5,6 +5,7 @@ import { FC } from "react";
 import { Post } from "@/models";
 import { Tags } from "@/components/Tags";
 import { SocialFeed } from "@/components/SocialFeed";
+import { ChevronRightIcon } from "@/utils/icons";
 
 interface LatestPostsProps {
     latestPosts: Post[]
@@ -13,9 +14,19 @@ interface LatestPostsProps {
 const LatestPosts: FC<LatestPostsProps> = ({latestPosts}) => {
     return (
         <section className='max-w-xl px-4 mx-auto mt-14 md:max-w-3xl lg:max-w-5xl xl:max-w-6xl md:px-0'>
-            <div className='mb-4'>
-                <h2 className='text-xs font-medium text-gray-600 uppercase'>Latest Articles</h2>
-                <span className='rounded-full mt-1 block h-0.5 bg-yellow-600 w-14'/>
+            <div className='mb-6 flex items-center justify-between'>
+                <div>
+                    <h2 className='text-sm sm:text-base font-semibold text-gray-800 uppercase tracking-wide'>Latest Updates</h2>
+                    <span className='rounded-full mt-1 block h-0.5 bg-yellow-600 w-14'/>
+                </div>
+                <div>
+                    <Link href={"/articles"}>
+                        <a className="inline-flex items-center text-sm text-gray-500 hover:underline hover:text-gray-800">
+                            Show All
+                            <ChevronRightIcon className="w-4 h-4 ml-1" />
+                        </a>
+                    </Link>
+                </div>
             </div>
             <div className='grid grid-cols-3 gap-3'>
                 <div className='col-span-3 space-y-3 md:space-y-6 md:col-span-2'>
@@ -33,7 +44,7 @@ const LatestPosts: FC<LatestPostsProps> = ({latestPosts}) => {
         return (
             <Link key={post.id} as={`/articles/${post.slug}`} href={`/articles/[slug]`}>
                 <a key={post.id}
-                   className='block px-4 py-6 transition duration-300 ease-in-out bg-white sm:rounded-md sm:p-6 hover:shadow'>
+                   className='block px-4 py-6 transition duration-300 ease-in-out bg-white rounded-md sm:p-6 hover:shadow'>
                     <div className="h-full flex items-start">
                         <div className="w-12 flex-shrink-0 flex flex-col text-center leading-none">
                             <span className="text-gray-500 pb-2 mb-2 border-b-2 border-gray-200">Jul</span>
