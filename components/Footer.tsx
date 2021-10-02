@@ -1,5 +1,5 @@
 import { FacebookIcon, InstagramIcon, TwitterIcon } from "@/utils/icons"
-import Logo from "./Logo"
+import { Logo } from "@/components"
 
 const Footer = () => {
 	return (
@@ -27,4 +27,4 @@ const Footer = () => {
 	)
 }
 
-export default Footer
+export { Footer }
