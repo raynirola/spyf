@@ -11,14 +11,14 @@ const Footer = () => {
 						Sikkim Progressive Youth Forum &copy; {new Date().getFullYear()}
 					</p>
 					<div className='inline-flex space-x-2'>
-						<div className='flex items-center justify-center w-6 h-6 transition duration-300 ease-in-out bg-gray-200 rounded-md cursor-pointer group hover:bg-white'>
-							<FacebookIcon className='w-4 h-4 text-gray-700 group-hover:text-[#1877F2]' />
+						<div className='flex items-center justify-center w-8 h-8 transition duration-300 ease-in-out bg-gray-200 rounded-md cursor-pointer group hover:bg-white'>
+							<FacebookIcon className='w-4 h-4 text-gray-700 group-hover:text-[#1877F2]'/>
 						</div>
-						<div className='flex items-center justify-center w-6 h-6 transition duration-300 ease-in-out bg-gray-200 rounded-md cursor-pointer group hover:bg-white'>
-							<TwitterIcon className='w-4 h-4 text-gray-700 group-hover:text-[#1DA1F2]' />
+						<div className='flex items-center justify-center w-8 h-8 transition duration-300 ease-in-out bg-gray-200 rounded-md cursor-pointer group hover:bg-white'>
+							<TwitterIcon className='w-4 h-4 text-gray-700 group-hover:text-[#1DA1F2]'/>
 						</div>
-						<div className='flex items-center justify-center w-6 h-6 transition duration-300 ease-in-out bg-gray-200 rounded-md cursor-pointer group hover:bg-white'>
-							<InstagramIcon className='w-4 h-4 text-gray-700 group-hover:text-[#E4405F]' />
+						<div className='flex items-center justify-center w-8 h-8 transition duration-300 ease-in-out bg-gray-200 rounded-md cursor-pointer group hover:bg-white'>
+							<InstagramIcon className='w-4 h-4 text-gray-700 group-hover:text-[#E4405F]'/>
 						</div>
 					</div>
 				</div>
