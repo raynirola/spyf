@@ -12,7 +12,7 @@ const topicColor = "#f20a03"
 
 const FeaturedPosts: FC<FeaturedPostsProps> = ({posts}) => {
     return (
-        <section className='max-w-xl px-4 mx-auto mt-6 sm:mt-14 md:max-w-3xl lg:max-w-5xl xl:max-w-6xl md:px-0'>
+        <section className='max-w-xl px-4 mx-auto mt-6 sm:mt-14 md:max-w-3xl lg:max-w-5xl xl:max-w-6xl xl:px-0'>
             <div className='grid aspect-w-1 aspect-h-1 md:aspect-w-16 md:aspect-h-7'>
                 <div className='grid grid-cols-2 grid-rows-3 gap-2 md:grid-cols-3 md:grid-rows-2'>
                     {renderPosts(posts)}
