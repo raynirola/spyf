@@ -39,3 +39,10 @@ export interface SEO {
     image: Asset
     keywords: string[]
 }
+
+export interface Member {
+    name: string
+    bio?: string
+    avatar?: string
+    designation?: string
+}
